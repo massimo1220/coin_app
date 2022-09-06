@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="coin app front end" />
+    <meta name="keywords" content="vue" />
+    <meta name="author" content="Yuri" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="svg" href="./assets/images/favicon.svg">
+    <title>check out</title>
+
+	<link rel="stylesheet" href="./assets/css/checkout2.css">
+</head>
+<body>
+	<div class="container">
+        <div class="second">
+            <div class="second_logo"><img src="./assets/images/checklogo.svg" alt="checklogo"></div>
+            <div class="second_title">Process Payment</div>
+            <div class="second_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit volutpat rhoncus pharetra nunc.</div>
+            <div class="barcode">
+                <div class="barcode_top">
+                    <div class="top_left">
+                        <img src="./assets/images/clock.svg" alt="clock">
+                        <div class="time" id="timer" data-minutes="15" data-seconds="0"></div>
+                    </div>
+                    <div class="top_right" id="popupbtn">
+                        <img src="./assets/images/info.svg" alt="info">
+                    </div>
+                </div>
+                <div class="barcode_img">
+                    <img src="./assets/images/bitcoincode.svg" alt="">
+                </div>
+                <div class="modal">
+                    <!-- Modal content -->
+                    <div class="popup">
+                        <div class="popup_row">
+                            <div>Total Price</div>
+                            <div>10 USD</div>
+                        </div>
+                        <div class="popup_row">
+                            <div>Exchange Rate</div>
+                            <div>10 USD</div>
+                        </div>
+                        <div class="popup_row">
+                            <div>Subtotal </div>
+                            <div>10 USD</div>
+                        </div>
+                        <div class="popup_row">
+                            <div>Network Cost</div>
+                            <div>0.00000000 BTC</div>
+                        </div>
+                        <div class="popup_row">
+                            <div class="popup_row_bold">Amount Due</div>
+                            <div>0.00000000 BTC</div>
+                        </div>
+                    </div>
+                    <div class="mask"></div>
+                </div>
+            </div>
+            <div class="amount_wallet">
+                <div class="amount_title">Amount Due</div>
+                <div class="amount_input">
+                    <div class="copy_input">0.003982 BTC</div>
+                    <div class="copy" onclick="asd(this)"><img src="./assets/images/copy.svg" alt="copy"></div>
+                </div>
+                <div class="wallet_title">Wallet Address</div>
+                <div class="wallet_input">
+                    <div class="copy_input">2N488BQnTzTZEG4tQZCpTKDxu99jwqD9LTE2N488BQnTzTZEG4tQZCpTKDxu99jwqD9LTE</div>
+                    <div class="copy" onclick="asd(this)"><img src="./assets/images/copy.svg" alt="copy"></div>
+                </div>
+                <div class="wallet_title">Memo</div>
+                <div class="wallet_input">
+                    <div class="copy_input">2N488BQnTzTZEG4tQZCpTKDxu99jwqD9LTE</div>
+                    <div class="copy" onclick="asd(this)"><img src="./assets/images/copy.svg" alt="copy"></div>
+                </div>
+                <div class="tooltip">Copied to clipboard</div>
+            </div>
+            <a href="#" class="back_btn">
+                <img src="./assets/images/arrow.svg" alt="leftarrow">
+                Back
+            </a>
+        </div>
+        <div class="footer">
+            <img src="./assets/images/footlogo.svg" alt="checkfootlogo">
+            <div class="footer_right">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Policy</a></div>
+                <div><a href="#">Contact</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./assets/js/countdown timer.js"></script>
+<script>
+    function asd(ele){
+        var preSibling = ele.previousElementSibling;
+        var content = preSibling.innerHTML;
+        navigator.clipboard.writeText(content);
+
+        document.getElementsByClassName("tooltip")[0].style.display = "block";
+        function hide(){
+            document.getElementsByClassName("tooltip")[0].style.display = "none";
+        }
+        setTimeout(hide, 1000);
+    }
+
+    var btn = document.getElementById("popupbtn");
+    var mask = document.querySelector(".mask");
+    var temp = document.querySelector(".popup");
+
+    btn.onclick = function() {
+       mask.classList.add("active")
+       temp.classList.add("active")
+        
+    }
+
+    mask.onclick = function() {
+        temp.classList.remove("active")
+        mask.classList.remove("active")
+    }
+</script>
+</html>

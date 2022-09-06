@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+}
+@font-face{
+    font-family: "made-tommy-regular";
+    src: url("../fonts/MADE TOMMY Medium_PERSONAL USE.otf");
+}
+body{
+    background-image: url(../images/mainback.svg);
+    background-size: 120%;
+    background-repeat: repeat-y;
+    background-position-y: -260px;
+}
+.container{
+    font-family:  'made-tommy-regular';
+    font-style: normal;
+    max-width: 1100px;
+    margin: auto;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_logo{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.login_card{
+    border-radius: 10px;
+    background-color: #0C092A;
+    box-shadow: 1px 18px 49px 0px rgb(0 0 0 / 10%);;
+    color: white;
+    width: 450px;
+    padding: 40px 60px;
+}
+.login_title{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.login_text{
+    font-size: 14px;
+    padding-bottom: 12px;
+}
+.row_pass{
+    margin: 10px 0;
+}
+.row_pass a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    padding-right: 10px;
+}
+.row_mail, .row_pass{
+    display: flex;
+    border: 1px solid #969494;
+    border-radius: 5px;
+    z-index: 11;
+}
+.row_mail img, .row_pass img{
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 10;
+}
+.row_mail input, .row_pass input{
+    width: 100%;
+    height: 36px;
+    background: #0C092A;
+    border-radius: 10px;
+    color: white;
+}
+.row_mail input:-webkit-autofill,
+.row_mail input:-webkit-autofill:hover, 
+.row_mail input:-webkit-autofill:focus{
+    background-color: red!important;
+}
+.row_rem{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.row_rem input{
+    margin-right: 10px;
+}
+.btn_signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 230px; */
+    background-color: #292568;
+    height: 50px;
+    font-size: 18px;
+    line-height: 23px;
+    cursor: pointer;
+    font-weight: 700;
+    user-select: none;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+input, input:focus{
+    outline: none;
+    border: none;
+}
+.sign_up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register{
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+a{
+    text-decoration: none;
+}
+a:active{
+    color: #0C092A;
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media only screen and (max-width: 960px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .login_card{
+        width: 100%;
+        padding: 20px 30px;
+    }
+    .login_title{
+        font-size: 20px;
+    }
+    .btn_signin{
+        /* width: 120px; */
+        height: 40px;
+        font-size: 14px;
+    }
+    .register{
+        padding: 12px 0;
+    }
+}
+
+/* scroll bar section */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    padding: 3px;
+    border: 1px #f1eeee solid;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C0C0C0; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #969494;
+}

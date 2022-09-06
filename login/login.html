@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="coin app front end" />
+    <meta name="keywords" content="vue" />
+    <meta name="author" content="Yuri" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="svg" href="./assets/images/favicon.svg">
+    <title>Login</title>
+
+	<link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+	<div class="container">
+        <div class="main">
+            <div class="main_logo">
+                <img src="./assets/images/mainlogo.svg" alt="mainlogo">
+            </div>
+            <div class="login_card">
+                <div class="login_title">Sign In</div>
+                <div class="login_text">Login to manage your account.</div>
+                <div class="row_mail">
+                    <img src="./assets/images/mail.svg" alt="email">
+                    <input class="mail_input" type="email" name="email" placeholder="h98119@gmail.com" autocomplete="off">
+                </div>
+                <div class="row_pass">
+                    <img src="./assets/images/key.svg" alt="password">
+                    <input id="pwd" class="pass_input" type="password" name="password">
+                    <a href="#" id="showhide" onclick="showhide()">Show</a>
+                </div>
+                <div class="row_rem">
+                    <input type="checkbox" name="check">
+                    <div>Remember me</div>
+                </div>
+                <div class="btn_signin">Sign In</div>
+            </div>
+            <div class="sign_up">
+                <div class="register">
+                    Don’t have an account? <a href="#">Sign up</a>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var pass = document.getElementById("pwd");
+    var btn_toggle = document.getElementById("showhide");
+    function showhide(){
+        var pwd = document.getElementById("pwd").value;
+        console.log(pwd);
+        if(pwd){
+            if(pass.getAttribute("type") == "text"){
+                pass.setAttribute("type","password");
+                btn_toggle.innerHTML = "Show";
+            } else {
+                pass.setAttribute("type","text");
+                btn_toggle.innerHTML = "Hide";
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="coin app front end" />
+    <meta name="keywords" content="vue" />
+    <meta name="author" content="Yuri" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="svg" href="./assets/images/favicon.svg">
+    <title>check out</title>
+
+	<link rel="stylesheet" href="./assets/css/checkout3.css">
+</head>
+<body>
+	<div class="container">
+        <div class="second">
+            <div class="second_logo"><img src="./assets/images/checklogo.svg" alt="checklogo"></div>
+            <div class="second_title">Process Payment</div>
+            <div class="second_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit volutpat rhoncus pharetra nunc.</div>
+            <div class="success">
+                <div class="success_img"><img src="./assets/images/success.svg" alt="success"></div>
+                <div class="success_title">Transfer Successful</div>
+            </div>
+            <div class="amount_wallet">
+                <a href="#" class="back_btn">
+                    View Card
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="./assets/images/footlogo.svg" alt="checkfootlogo">
+            <div class="footer_right">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Policy</a></div>
+                <div><a href="#">Contact</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+ function asd(ele){
+    var preSibling = ele.previousElementSibling;
+    var content = preSibling.innerHTML;
+    navigator.clipboard.writeText(content);
+
+    document.getElementsByClassName("tooltip")[0].style.display = "block";
+    function hide(){
+        document.getElementsByClassName("tooltip")[0].style.display = "none";
+    }
+    setTimeout(hide, 1000);
+ }
+</script>
+</html>

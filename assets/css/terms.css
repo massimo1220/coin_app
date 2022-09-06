@@ -1,0 +1,65 @@
+.container{
+    font-family:  'made-tommy-regular';
+    font-style: normal;
+    max-width: 1100px;
+    margin: auto;
+}
+.terms_title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    padding-top: 88px;
+    padding-bottom: 30px;
+    color: #292568;
+}
+.items_title{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 60px;
+    color: #292568;
+}
+.terms_item{
+    padding-bottom: 50px;
+}
+.items_text{
+    font-weight: 100!important;
+    font-size: 18px;
+    line-height: 30px;
+    color: #0c0c0c;
+}
+.items_text p{
+    text-indent: 20px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1340px) {
+
+}
+@media only screen and (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+    .terms_item{
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: justify;
+        text-indent: 10px;
+    }
+}
